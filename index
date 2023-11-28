@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() {
+    // Constants for weightage of each component
+    const double ASSIGNMENT_WEIGHT = 0.3;
+    const double QUIZ_WEIGHT = 0.2;
+    const double EXAM_WEIGHT = 0.5;
+
+    // Variables to store user input
+    double assignmentScore, quizScore, examScore;
+
+    // Get user input for scores
+    std::cout << "Enter your assignment score (out of 100): ";
+    std::cin >> assignmentScore;
+
+    std::cout << "Enter your quiz score (out of 100): ";
+    std::cin >> quizScore;
+
+    std::cout << "Enter your exam score (out of 100): ";
+    std::cin >> examScore;
+
+    // Calculate overall grade
+    double overallGrade = (assignmentScore * ASSIGNMENT_WEIGHT) +
+                         (quizScore * QUIZ_WEIGHT) +
+                         (examScore * EXAM_WEIGHT);
+
+    // Display the overall grade
+    std::cout << "\nYour overall grade is: " << overallGrade << std::endl;
+
+    return 0;
+}
